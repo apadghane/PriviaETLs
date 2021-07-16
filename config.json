@@ -1,0 +1,48 @@
+{
+  "sentinel_metrics": {
+    "data": "data",
+    "archive": "data/archive",
+    "log": "logs",
+    "run_log": "logs/run_logs.txt",
+    "error_log": "logs/error_logs.txt",
+    "file": "Privia Sentinel Metrics",
+    "sheets": ["Tablespace", "Provider Group", "Region"],
+    "tables": [
+      "athena_sentinel_metrics_tablespace",
+      "athena_sentinel_metrics_providergroup",
+      "athena_sentinel_metrics_region"
+    ],
+    "email_alerts": {
+      "dir_not_avail": {
+        "subject": "Sentinel Metrics ETL directory not available",
+        "message": "The data folder was not present, please make data directory and store data file in it.",
+        "recipient": "apadghane@nicesoftwaresolutions.com"
+      },
+      "file_not_found": {
+        "subject": "Sentinel Metrics ETL data file not found",
+        "message": "Data file not found on data directory, please put data file in data directory.",
+        "recipient": "apadghane@nicesoftwaresolutions.com"
+      },
+      "etl_complete": {
+        "subject": "Sentinel Metrics ETL completion",
+        "message": "ETL of Sentinel Metrics is completed successfully, data is loaded in tables athena_sentinel_metrics_tablespace, athena_sentinel_metrics_providergroup, athena_sentinel_metrics_region.",
+        "recipient": "apadghane@nicesoftwaresolutions.com"
+      }
+    }
+  },
+  "aetna": {
+    "data": "data/aetna",
+    "sheet": "Detail",
+    "markets": {
+      "privia": "Georgia",
+      "privva": "Mid-Atlantic",
+      "privgc": "Gulf Cost"
+    },
+    "columns": ["Month","PBG_Number","PBG_Name","Subgroup_Number","Subgroup_Name","TIN","TIN_Name","Physician_Number"
+            ,"NPI","Physician_Name","Physician_Address","MSC_Indicator","Specialty_Category","Legacy"
+            ,"SRC_Member_ID","Member_ID","Last_Name","First_Name","DOB","Age","Gender","Address"
+            ,"Phone_Number","HICN","Effective_Date","Term_Date","Product","Group_Indicator"
+            ,"Part_D_Ind","RA_Factor_Type","Risk_Score","PULSE_Score","CM_Ind","Contract_Number"],
+    "table": "CQR.aetna_Staging_Table_membership"
+  }
+}

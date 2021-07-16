@@ -1,0 +1,7 @@
+SERVER_NAME=demoserver
+DATABASE=demodatabase
+DRIVER=demodriver
+EMAIL_PORT=demo
+EMAIL_SERVER=demo
+EMAIL_SENDER=demo
+EMAIL_PASS=demo
